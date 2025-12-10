@@ -1,11 +1,12 @@
 import java.util.HashMap;
 
-public class FirstNonRepestingChar {
+public class FindFirstRepeatingChar {
 
-    public static char findFirstRepeting(String s){
-        HashMap <Character ,Integer> map=new HashMap<>();
+    public static char findFirstRepeting( String s){
 
-        for(int i=0; i < s.length(); i++){
+        HashMap<Character ,Integer> map=new HashMap<>();
+
+        for(int i=0; i< s.length(); i++){
             char ch=s.charAt(i);
 
             if(map.containsKey(ch)){
@@ -15,22 +16,22 @@ public class FirstNonRepestingChar {
                 map.put(ch, 1);
             }
         }
-        for(int i=0 ; i< s.length() ; i++){
+        for(int i=0; i<s.length();i++){
             char ch=s.charAt(i);
-            if(map.get(ch)== 1){
+
+            if(map.get(ch) >1){
                 return ch;
             }
         }
 
         return '-';
     }
-
     public static void main(String[] args) {
         
-        String s="swiss";
+        String s="abcdec";
 
         char ans=findFirstRepeting(s);
         System.out.println(ans);
+
     }
-    
 }
