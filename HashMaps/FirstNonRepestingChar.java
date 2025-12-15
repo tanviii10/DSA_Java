@@ -27,7 +27,7 @@ public class FirstNonRepestingChar {
 
     public static void main(String[] args) {
         
-        String s="swiss";
+        String s="abcdabc";
 
         char ans=findFirstRepeting(s);
         System.out.println(ans);
