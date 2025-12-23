@@ -1,4 +1,4 @@
-public class Stack {
+public class StackImplementation {
 
     static int[] stack;
     static int top=-1;
