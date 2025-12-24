@@ -20,5 +20,6 @@ public class Factorial {
         int n=sc.nextInt();
 
         System.out.println("factorial of "+ n+ " is "+ fact(n));
+        sc.close();
     }
 }
