@@ -8,6 +8,7 @@ public class BubbleSort {
         }
 
         // One pass of bubble sort
+        //After 1 pass, the largest element moves to the end
         for (int i = 0; i < n - 1; i++) {
             if (arr[i] > arr[i + 1]) {
                 int temp = arr[i];
