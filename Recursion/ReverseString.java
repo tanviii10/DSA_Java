@@ -8,8 +8,10 @@ public class ReverseString {
         char temp=arr[i];
         arr[i]=arr[j];
         arr[j]=temp;
+        i++;
+        j--;
 
-        reverse(arr, i+1, j-1);
+        reverse(arr, i, j);
     }
     public static void main(String[] args) {
 
