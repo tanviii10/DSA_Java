@@ -1,23 +1,29 @@
 public class IsSorted {
 
-    public static boolean isSorted(int arr[],int index){
+    public static boolean isSorted(int[] arr, int index) {
 
-        if( index == arr.length -1){
+        // Base case
+        if (index == arr.length - 1) {
             return true;
         }
 
-        if(arr[index] > arr[index+1]){
+        if (arr[index] > arr[index + 1]) {
             return false;
         }
-        
-        return isSorted(arr, index+1);
-        
+
+        return isSorted(arr, index + 1);
     }
+
     public static void main(String[] args) {
-        int arr[]={ 2,5,6,7,8,5};
 
-        System.out.println("isSorted ? "+ isSorted(arr,0));
+        int[] arr = {2, 4, 5, 6, 2};
 
+        boolean ans = isSorted(arr, 0);
+
+        if (ans) {
+            System.out.println("sorted");
+        } else {
+            System.out.println("not sorted");
+        }
     }
-    
 }
