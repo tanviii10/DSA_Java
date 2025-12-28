@@ -46,7 +46,7 @@ public class NQueen {
                 // Explore
                 solve(row + 1, board, ans, n);
 
-                // Backtrack (UNDO)
+                // Backtrack
                 board[row][col] = '.';
             }
         }
