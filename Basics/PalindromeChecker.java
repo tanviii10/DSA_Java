@@ -11,6 +11,7 @@ public class PalindromeChecker {
         } else {
             System.out.println(num + " is NOT a Palindrome number.");
         }
+        sc.close();
     }
 
     public static boolean isPalindrome(int number) {

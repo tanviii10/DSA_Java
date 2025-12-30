@@ -22,5 +22,6 @@ public class PerfectNo {
         int n= sc.nextInt();
 
         System.out.println(num(n));
+        sc.close();
     }
 }
