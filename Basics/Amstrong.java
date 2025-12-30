@@ -37,5 +37,6 @@ public class Amstrong {
         int n=sc.nextInt();
 
         System.out.println(calAms(n));
+        sc.close();
     }
 }

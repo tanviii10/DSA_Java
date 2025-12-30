@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class fun {
+public class EvenOdd {
     
     public static int odd(int n){
 
@@ -20,6 +20,7 @@ public class fun {
         int n=sc.nextInt();
 
         odd(n);
+        sc.close();
     }
     
 }

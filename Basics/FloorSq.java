@@ -17,6 +17,7 @@ public class FloorSq {
         int n=sc.nextInt();
 
         System.out.println(flsq(n));
+        sc.close();
     }
     
 }

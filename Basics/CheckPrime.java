@@ -9,6 +9,7 @@ public class CheckPrime {
 
         boolean isPrime = isPrimeByDivisorCount(n);
         System.out.println(n + " is prime: " + isPrime);
+        sc.close();
     }
 
     public static boolean isPrimeByDivisorCount(int n) {

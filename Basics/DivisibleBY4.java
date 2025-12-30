@@ -23,5 +23,6 @@ public class DivisibleBY4 {
         String str=sc.nextLine();
 
         System.out.println(div(str));
+        sc.close();
     }
 }

@@ -12,6 +12,7 @@ public class CheckAmstrongNo {
         } else {
             System.out.println(num + " is NOT an Armstrong number.");
         }
+        sc.close();
     }
 
     public static boolean isArmstrong(int number) {

@@ -25,5 +25,6 @@ public class Fabio {
         int n=sc.nextInt();
 
         System.out.println(fab(n));
+        sc.close();
     }
 }
