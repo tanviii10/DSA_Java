@@ -49,7 +49,7 @@ public class PermutationInString {
         String s2 = "eidbaooo";
 
         boolean ans = checkInclusion(s1, s2);
-        System.out.println("Does s2 contain a permutation of s1? → " + ans);
+        System.out.println("Does s2 contain a permutation of s1 " + ans);
     }
 }
 
