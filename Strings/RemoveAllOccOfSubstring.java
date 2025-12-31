@@ -3,6 +3,7 @@ public class RemoveAllOccOfSubstring {
     public static String remove( String s, String part){
 
         StringBuilder sb=new StringBuilder();
+        
         int m = part.length();
 
         for( char ch : s.toCharArray()){
