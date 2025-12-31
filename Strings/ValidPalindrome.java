@@ -35,8 +35,8 @@ public class ValidPalindrome {
     // small test
     public static void main(String[] args) {
         ValidPalindrome vp = new ValidPalindrome();
-        System.out.println(vp.isPalindrome("A man, a plan, a canal: Panama")); // true
-        System.out.println(vp.isPalindrome("race a car")); // false
-        System.out.println(vp.isPalindrome("0P")); // false (LeetCode example)
+        System.out.println(vp.isPalindrome("A man, a plan, a canal: Panama")); 
+        System.out.println(vp.isPalindrome("race a car")); 
+        System.out.println(vp.isPalindrome("0P")); 
     }
 }
