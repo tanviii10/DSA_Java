@@ -126,7 +126,7 @@ public class SinglyLinkedList{
         }
         System.out.println("null");
     }
-    
+
     public static void main(String[] args) {
         
         insertAtHead(5);
@@ -139,6 +139,15 @@ public class SinglyLinkedList{
         print();
 
         insertAtPosition(3, 15);
+        print();
+
+        deleteAtHead();
+        print();
+
+        deleteAtTail();
+        print();
+
+        deleteByValue(15);
         print();
     }
 }
