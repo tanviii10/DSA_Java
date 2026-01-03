@@ -11,17 +11,18 @@ public class ReverseLLrecursive {
     }
 
     static Node head=null;
+ 
+    public static Node reverse(Node curr, Node prev) {
 
-    public static void reverse(Node head, Node curr, Node prev){
-
-        if( curr == null){
-            head=prev;
-            return;
+        // Base case
+        if (curr == null) {
+            return prev;
         }
 
-        Node forward=curr.next;
-        reverse(head, forward, curr);
-        curr.next=prev;
+        Node forward = curr.next;
+        curr.next = prev;
+
+        return reverse(forward, curr);
     }
 
     public static void print(){
@@ -42,7 +43,8 @@ public class ReverseLLrecursive {
 
         print();
         
-        
+        head=reverse(head, null);
+        print();
     }
     
 }
