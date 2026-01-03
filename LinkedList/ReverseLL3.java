@@ -1,4 +1,4 @@
-public class ReverseLLrecursive {
+public class ReverseLL3 {
 
     public static class  Node {
         int data;
@@ -11,22 +11,22 @@ public class ReverseLLrecursive {
     }
 
     static Node head=null;
- 
-    public static Node reverse(Node curr, Node prev) {
 
-        // Base case
-        if (curr == null) {
-            return prev;
+    static Node reverse(Node head){
+
+        if( head == null || head.next == null){
+            return head;
         }
 
-        Node forward = curr.next;
-        curr.next = prev;
+        Node newHead = reverse(head.next);
 
-        return reverse(forward, curr);
+        head.next.next=head;
+        head.next=null;
+
+        return newHead;
     }
 
-    public static void print(){
-
+    static void print(){
         Node temp=head;
         while( temp != null){
             System.out.print(temp.data+" -> ");
@@ -34,16 +34,14 @@ public class ReverseLLrecursive {
         }
         System.out.println("null");
     }
-
     public static void main(String[] args) {
-        
         head = new Node(10);
         head.next = new Node(20);
         head.next.next = new Node(30);
 
         print();
-        
-        head=reverse(head, null);
+
+        head = reverse(head);
         print();
     }
     

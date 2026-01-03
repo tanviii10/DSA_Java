@@ -1,4 +1,4 @@
-public class ReverseLLitrative {
+public class ReverseLL1 {
 
     public static class Node{
 
