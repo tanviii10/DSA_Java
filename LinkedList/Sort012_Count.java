@@ -40,7 +40,7 @@ public class Sort012_Count {
                 temp.data=1;
                 oneCount--;
             }
-            else{
+            else if( twoCount != 0){
                 temp.data=2;
                 twoCount--;
             }
