@@ -20,6 +20,7 @@ public class MinCostValidString {
                 stack.push(ch);
             } 
             else {
+                //for closing bracket jab opening braket melega tab pop karo
                 if (!stack.isEmpty() && stack.peek() == '{') {
                     stack.pop();
                 } else {
