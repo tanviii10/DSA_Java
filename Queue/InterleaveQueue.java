@@ -15,27 +15,27 @@ public class InterleaveQueue {
 
         Stack<Integer> st = new Stack<>();
 
-        // step 1: first half -> stack
+        //first half - stack
         for (int i = 0; i < n / 2; i++) {
             st.push(q.poll());
         }
 
-        // step 2: stack -> queue
+        //stack - queue
         while (!st.isEmpty()) {
             q.add(st.pop());
         }
 
-        // step 3: move first half to back
+        //move first half to back
         for (int i = 0; i < n / 2; i++) {
             q.add(q.poll());
         }
 
-        // step 4: again first half -> stack
+        //again first half - stack
         for (int i = 0; i < n / 2; i++) {
             st.push(q.poll());
         }
 
-        // step 5: interleave
+        //mix
         while (!st.isEmpty()) {
             q.add(st.pop());
             q.add(q.poll());
