@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BinaryInorder {
+public class BinaryPostoder {
 
     static class Node {
         int data;
@@ -34,8 +34,7 @@ public class BinaryInorder {
         return root;
     }
 
-
-    static void inorder(Node root) {
+    static void postorder(Node root) {
 
     // base case
     if (root == null) {
@@ -43,25 +42,22 @@ public class BinaryInorder {
     }
 
     // Left
-    inorder(root.left);
+    postorder(root.left);
+
+    // Right
+    postorder(root.right);
 
     // Root
     System.out.print(root.data + " ");
 
-    // Right
-    inorder(root.right);
-
     }
-
-
     public static void main(String[] args) {
 
         System.out.println("Enter data (-1 for NULL):");
 
         Node root = buildTree();
 
-        System.out.println("\n\nInorder Traversal:");
-        inorder(root);
+        System.out.println("\n\nPostorder Traversal:");
+        postorder(root);
     }
-    
 }

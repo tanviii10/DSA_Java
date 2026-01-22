@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class BinaryPreoder {
@@ -36,41 +34,6 @@ public class BinaryPreoder {
         return root;
     }
 
-    static void levelOrderTraversal(Node root) {
-
-        if (root == null) return;
-
-        Queue<Node> q = new LinkedList<>();
-
-        q.add(root);
-        q.add(null); 
-
-        while (!q.isEmpty()) {
-
-            Node temp = q.poll();
-
-            // If level ends
-            if (temp == null) {
-                System.out.println();
-
-                // if more nodes exist
-                if (!q.isEmpty()) {
-                    q.add(null);
-                }
-            }
-            else {
-                System.out.print(temp.data + " ");
-
-                if (temp.left != null) {
-                    q.add(temp.left);
-                }
-
-                if (temp.right != null) {
-                    q.add(temp.right);
-                }
-            }
-        }
-    }
     static void preorder(Node root) {
 
     // base case
@@ -86,16 +49,13 @@ public class BinaryPreoder {
 
     // Right
     preorder(root.right);
-}
+    }
 
     public static void main(String[] args) {
 
         System.out.println("Enter data (-1 for NULL):");
 
         Node root = buildTree();
-
-        System.out.println("\nLevel Order Traversal (Line by Line):");
-        levelOrderTraversal(root);
 
         System.out.println("\n\nPreorder Traversal:");
         preorder(root);
