@@ -73,6 +73,7 @@ public class BuildTree{
 
    public static void main(String[] args) {
     
+    // 1 3 7 -1 -1 11 -1 -1 5 -1 17 -1 -1
     System.out.println("Enter data : ");
     Node root=build();
 
@@ -80,20 +81,5 @@ public class BuildTree{
     levelOrder(root);
 
    }
-   /*
-1
-3
-7
--1
--1
-11
--1
--1
-5
--1
-17
--1
--1
-*/
-
+  
 }

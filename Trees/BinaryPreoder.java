@@ -16,46 +16,42 @@ public class BinaryPreoder {
 
     static Scanner sc = new Scanner(System.in);
 
-    static Node buildTree() {
-        int data = sc.nextInt();
+    static Node BuildTree(){
 
-        if (data == -1) {
+        int data=sc.nextInt();
+        if(data == -1){
             return null;
         }
 
-        Node root = new Node(data);
+        Node root=new Node(data);
 
-        System.out.println("Enter left of " + data);
-        root.left = buildTree();
+        System.out.println("Enter left of : ");
+        root.left=BuildTree();
 
-        System.out.println("Enter right of " + data);
-        root.right = buildTree();
+        System.out.println("Enter right of : ");
+        root.right=BuildTree();
 
         return root;
+
     }
 
-    static void preorder(Node root) {
+    static void preorder(Node root){
 
-    // base case
-    if (root == null) {
-        return;
-    }
+        if(root == null){
+            return ;
+        }
 
-    // Root
-    System.out.print(root.data + " ");
+        System.out.print(root.data+ " ");
 
-    // Left
-    preorder(root.left);
-
-    // Right
-    preorder(root.right);
+        preorder(root.left);
+        preorder(root.right);
     }
 
     public static void main(String[] args) {
 
         System.out.println("Enter data (-1 for NULL):");
 
-        Node root = buildTree();
+        Node root = BuildTree();
 
         System.out.println("\n\nPreorder Traversal:");
         preorder(root);

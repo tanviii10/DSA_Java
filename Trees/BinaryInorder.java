@@ -2,66 +2,57 @@ import java.util.Scanner;
 
 public class BinaryInorder {
 
-    static class Node {
+    static class Node{
         int data;
         Node left;
         Node right;
 
-        Node(int data) {
-            this.data = data;
-            this.left = null;
-            this.right = null;
+        Node(int data){
+            this.data=data;
+            this.left=null;
+            this.right=null;
         }
     }
 
-    static Scanner sc = new Scanner(System.in);
-
-    static Node buildTree() {
-        int data = sc.nextInt();
-
-        if (data == -1) {
+    static Scanner sc=new Scanner(System.in);
+    static Node buildTree(){
+        
+        int data =sc.nextInt();
+        if(data == -1){
             return null;
         }
 
-        Node root = new Node(data);
+        Node root=new Node(data);
 
-        System.out.println("Enter left of " + data);
-        root.left = buildTree();
+        System.out.println("Enter left of : "+data);
+        root.left=buildTree();
 
-        System.out.println("Enter right of " + data);
-        root.right = buildTree();
+        System.out.println("enter right of :"+data);
+        root.right=buildTree();
 
         return root;
     }
 
+    static void Inorder(Node root){
 
-    static void inorder(Node root) {
+        if(root == null){
+            return;
+        }
 
-    // base case
-    if (root == null) {
-        return;
+        Inorder(root.left);
+        System.out.print(root.data+" ");
+        Inorder(root.right);
     }
-
-    // Left
-    inorder(root.left);
-
-    // Root
-    System.out.print(root.data + " ");
-
-    // Right
-    inorder(root.right);
-
-    }
-
-
+    
     public static void main(String[] args) {
 
-        System.out.println("Enter data (-1 for NULL):");
+        System.out.println("enter data: ");
 
-        Node root = buildTree();
+        Node root=buildTree();
 
-        System.out.println("\n\nInorder Traversal:");
-        inorder(root);
+        System.out.println("Inorder trversal : ");
+        Inorder(root);
+
     }
     
 }
