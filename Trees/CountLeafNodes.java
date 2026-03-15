@@ -33,25 +33,23 @@ public class CountLeafNodes {
 
         return root;
     }
+
     static int countLeaf(Node root) {
 
-    // base case
-    if (root == null) {
-        return 0;
-    }
+        if(root == null){
+            return 0;
+        }
 
-    // if leaf node
-    if (root.left == null && root.right == null) {
-        return 1;
-    }
+        if(root.left == null && root.right == null){
+            return 1;
+        }
 
-    // recursive calls
-    return countLeaf(root.left) + countLeaf(root.right);
+        return countLeaf(root.left)+ countLeaf(root.right);
     }
 
     public static void main(String[] args) {
 
-        System.out.println("Enter data (-1 for NULL):");
+        System.out.println("Enter data :");
 
         Node root = buildTree();
 
