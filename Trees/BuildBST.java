@@ -52,7 +52,8 @@ public class BuildBST {
     static Node insertIntoBST(Node root, int data) {
 
         if (root == null) {
-            return new Node(data);
+            root = new Node(data);
+            return root;
         }
 
         if (data < root.data) {
