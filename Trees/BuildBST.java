@@ -85,9 +85,9 @@ public class BuildBST {
         Node root = null;
 
         root = insertIntoBST(root);
-        
+
         System.out.println("printing BST : ");
         levelOrder(root);
-
+        
     }
 }
