@@ -65,14 +65,13 @@ public class BuildBST {
         return root;
     }
 
-    static Node insertIntoBST(Node root) {
+    static Node takeInput(Node root) {
 
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Enter data To build BST:");
 
         int data = sc.nextInt();
-
+        sc.close();
         while (data != -1) {
             root = insertIntoBST(root, data);
             data = sc.nextInt();
@@ -85,7 +84,7 @@ public class BuildBST {
 
         Node root = null;
 
-        root = insertIntoBST(root);
+        root = takeInput(root);
 
         System.out.println("printing BST : ");
         levelOrder(root);
