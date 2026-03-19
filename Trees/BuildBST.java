@@ -71,12 +71,12 @@ public class BuildBST {
         System.out.println("Enter data To build BST:");
 
         int data = sc.nextInt();
-        sc.close();
+       
         while (data != -1) {
             root = insertIntoBST(root, data);
             data = sc.nextInt();
         }
-
+        sc.close();
         return root;
     }
 
