@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class BuildBST {
+public class SearchInBST {
 
     static class  Node {
         int data;
@@ -80,6 +80,22 @@ public class BuildBST {
         return root;
     }
 
+    static boolean search(Node root, int data){
+        if(root == null){
+            return false;
+        }
+        if( root.data == data){
+            return true;
+        }
+
+        if(root.data > data){
+            return search(root.left, data);
+        }
+        else{
+            return search(root.right, data);
+        }
+    }
+
     public static void main(String[] args) {
 
         Node root = null;
@@ -88,6 +104,10 @@ public class BuildBST {
 
         System.out.println("printing BST : ");
         levelOrder(root);
+
+        System.err.println("is data present in BST ? "+ search(root, 10));
+        System.err.println("is data present in BST ? "+ search(root, 20));
         
     }
+    
 }
