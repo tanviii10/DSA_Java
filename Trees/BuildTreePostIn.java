@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class BuildTreePostIn {
 
     static class Node {
