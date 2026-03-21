@@ -55,7 +55,7 @@ public class BFS{
             int v = sc.nextInt();
             addEdge(adj, u, v);
         }
-
+        sc.close();
         System.out.print("BFS Traversal: ");
         bfs(1, adj, V);   // start from node 1
     }

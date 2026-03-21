@@ -45,7 +45,7 @@ public class Graph{
             int v = sc.nextInt();
             addEdge(adj, u, v);
         }
-
+        sc.close();
         // Print graph
         printGraph(adj, V);
     }
