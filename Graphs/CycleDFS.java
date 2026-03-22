@@ -7,7 +7,25 @@ public class CycleDFS {
         adj.get(a).add(b);
         adj.get(b).add(a);
     }
-    
+
+    static boolean dfs(int start ,int parent, boolean visited[] , ArrayList<ArrayList<Integer>>adj ){
+
+        visited[start]=true;
+
+        for(int i=0 ; i < adj.get(start).size() ; i++){
+            int neighbor=adj.get(start).get(i);
+
+            if(! visited[neighbor]){
+                if(dfs(neighbor,start, visited, adj)){
+                    return true;
+                }
+            }
+            else if (neighbor != parent) {
+                return true; // cycle found
+            }
+        }
+        return false;
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
@@ -21,7 +39,7 @@ public class CycleDFS {
             adj.add(new ArrayList<>());
         }
 
-        for(int i=0; i< E ; i++){
+        for(int i=0; i < E ; i++){
             int a=sc.nextInt();
             int b=sc.nextInt();
 
@@ -33,7 +51,7 @@ public class CycleDFS {
 
         for(int i=0 ;i <= V ;i++){
             if(!visited[i]){
-                if(dfs(i , visited , adj, V)){
+                if(dfs(i , -1,visited , adj)){
                     cycle=true;
                     break;
                 }
@@ -45,5 +63,6 @@ public class CycleDFS {
         else{
             System.out.println("no cycle");
         }
+        sc.close();
     }
 }
