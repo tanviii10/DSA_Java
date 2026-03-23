@@ -34,7 +34,7 @@ public class CycleDirGrapthDFS {
         int V=sc.nextInt();
         System.out.print("enter no. of edges ");
         int E=sc.nextInt();
-
+        
         ArrayList<ArrayList<Integer>>adj=new ArrayList<>();
 
         for(int i=0; i <= V ;i++){
@@ -46,7 +46,7 @@ public class CycleDirGrapthDFS {
 
             addEdge(adj,a,b);
         }
-
+        sc.close();
         boolean visited[]=new boolean[V+1];
         boolean reccStack[]=new boolean[V+1];
 
@@ -59,6 +59,6 @@ public class CycleDirGrapthDFS {
             }
         }
         System.out.println("no cycle");
-        sc.close();
+
     }
 }
