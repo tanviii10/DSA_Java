@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class DisjointByRank {
 
     static int[] parent;
@@ -31,41 +29,34 @@ public class DisjointByRank {
         }
     }
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        
-        System.out.print("Enter no. of nodes : ");
-        int n = sc.nextInt();
-        System.out.print("Enter the no. of Operations : ");
-        int q = sc.nextInt(); 
+        int n = 7;
 
         parent = new int[n + 1];
-        rank = new int[n + 1];
+        rank= new int [n+1];
 
-        // initialize
         for (int i = 1; i <= n; i++) {
             parent[i] = i;
-            rank[i] = 0;
+            rank[i]= 1;
         }
 
-        for (int i = 0; i < q; i++) {
+        unionByRank(1,2);
+        unionByRank(2, 3);
+        unionByRank(4, 5);
+        unionByRank(6, 7);
+        unionByRank(5, 6);
 
-            int type = sc.nextInt();
-            int u = sc.nextInt();
-            int v = sc.nextInt();
-
-            if (type == 1) {
-                unionByRank(u, v);
-            } 
-            else if (type == 2) {
-                if (findParent(u) == findParent(v)) {
-                    System.out.println("Same Set");
-                } else {
-                    System.out.println("Different Set");
-                }
-            }
+        if (findParent(3) == findParent(7)) {
+            System.out.println("Same");
+        } else {
+            System.out.println("Not Same");
         }
 
-        sc.close();
+        unionByRank(3, 7);
+
+        if (findParent(3) == findParent(7)) {
+            System.out.println("Same");
+        } else {
+            System.out.println("Not Same");
+        }
     }
-    
 }
