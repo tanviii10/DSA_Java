@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class EvenOdd {
     
-    public static int odd(int n){
+    public static void odd(int n){
 
         if(n%2==0){
             System.out.println("no is even");
@@ -11,7 +11,6 @@ public class EvenOdd {
             System.out.println("no is odd");
         }
 
-        return n;
     }
 
     public static void main(String[] args) {
