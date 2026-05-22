@@ -7,7 +7,7 @@ public class Fabionacci{
         int sec=1;
         System.out.print(first + " "+ sec+" ");
 
-        for(int i=3 ; i<=n ; i++){
+        for(int i=0 ; i<n ; i++){
 
             int next = first + sec;
           
